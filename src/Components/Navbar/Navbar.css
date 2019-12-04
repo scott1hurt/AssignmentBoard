@@ -1,0 +1,43 @@
+.navbar {
+  height: 60px;
+  width: 100%;
+  background: linear-gradient(270deg, #bda7ff, #26c2ff);
+  background-size: 400% 400%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  animation: AnimationName 5s ease infinite;
+  margin-bottom: 25px;
+}
+
+.navbar-header {
+  font-size: 21px;
+  color: white;
+  margin-left: 20px;
+}
+
+.navbar-button {
+  height: 60%;
+  width: 40px;
+  background-color: rgb(255, 255, 255);
+  font-size: 18px;
+  border: none;
+  border-radius: 6px;
+  padding: 2px 12px;
+  transition: all 0.5s;
+  cursor: pointer;
+  outline: none;
+  margin-right: 20px;
+  color: rgb(20, 20, 20);
+}
+
+.navbar-button:hover {
+  box-shadow: 2px 2px 15px rgba(68, 68, 68, 0.37);
+}
+
+
+@keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}

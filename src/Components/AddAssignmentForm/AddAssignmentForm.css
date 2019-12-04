@@ -1,0 +1,112 @@
+.layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.438);
+  z-index: 100;
+}
+
+.addContactForm {
+  position: absolute;
+  height: 75%;
+  max-height: 600px;
+  width: 70%;
+  max-width: 750px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 101;
+}
+
+.error {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  background-color: rgb(255, 112, 112);
+  width: 100%;
+  height: 60px;
+  top: 0;
+  z-index: 105;
+  transition: all 0.35s;
+}
+
+.hide {
+  transform: translateY(-100%);
+  background-color: rgba(255, 112, 112, 0);
+}
+
+.show {
+  transform: translateY(0%);
+}
+
+.input {
+  padding-left: 20px;
+  margin: 20px 0;
+  width: 75%;
+  height: 35px;
+  font-size: 17px;
+  color: rgba(0, 0, 0, 0.692);
+  border: 1px solid rgba(0, 0, 0, 0.253);
+}
+
+.actionButtons {
+  display: inline-block;
+  margin-top: 25px;
+}
+
+.button {
+  margin-right: 35px;
+  height: 35px;
+  width: 95px;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.13);
+  font-size: 16px;
+  border-radius: 4px;
+  padding: 2px 12px;
+  transition: all 0.5s;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.157);
+}
+
+
+.requirementTags {
+  display: flex;
+  flex-wrap: wrap;
+  width: 75%;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  height: 25px;
+  border: 1px solid rgba(153, 153, 153, 0.274);
+  border-radius: 10px;
+  padding: 4px;
+  margin: 6px;
+  margin-left: 0;
+}
+
+.tagName {
+  margin: 0;
+  margin-left: 7px;
+}
+
+.tagButton {
+  height: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.5s;
+  outline: none;
+}
+
+.tagButton:hover {
+  background-color: rgb(226, 226, 226);
+}

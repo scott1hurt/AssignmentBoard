@@ -1,0 +1,18 @@
+.main {
+  width: 80%;
+  max-width: 500px;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 18px #88888850;
+  margin: 35px;
+}
+
+.name {
+  font-size: 27px;
+  margin: 6px 0;
+}
+
+.requirements {
+  font-size: 20px;
+  margin: 6px 0;
+}

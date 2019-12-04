@@ -1,0 +1,10 @@
+.assignmentsContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.requirements {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
