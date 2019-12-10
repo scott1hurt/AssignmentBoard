@@ -1,0 +1,10 @@
+.sideBarButton {
+    font-size: 12pt;
+    border-radius: 6px;
+    cursor: pointer;
+    outline: none;
+    margin-right: 20px;
+    padding: 1px 20px;
+    background-color: lightslategrey;
+    color: white;
+}
