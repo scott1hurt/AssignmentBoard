@@ -1,10 +1,19 @@
-.sideBarButton {
-    font-size: 12pt;
-    border-radius: 6px;
-    cursor: pointer;
-    outline: none;
-    margin-right: 20px;
-    padding: 1px 20px;
-    background-color: lightslategrey;
-    color: white;
+.o-sidebar {
+  position: absolute;
+  height: 100%;
+  width: 55%;
+  max-width: 350px;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to bottom, #232526, #2c2d2e);
+  transition: all .75s;
+  z-index: 101;
+}
+
+.false {
+  transform: translateX(0%);
+}
+
+.true {
+  transform: translateX(-100%);
 }

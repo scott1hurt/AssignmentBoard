@@ -4,6 +4,8 @@ import assignments from '../../assignments'
 import AddAssignmentForm from '../../Components/AddAssignmentForm/AddAssignmentForm';
 import AssignmentsContainer from '../../Components/AssignmentsContainer/AssignmentsContainer'
 import Switcher from '../../Components/Switcher/Switcher';
+import Sidebar from '../../Components/Sidebar/'
+import Backdrop from '../../Components/Backdrop'
 
 class Homescreen extends Component {
 
@@ -11,7 +13,8 @@ class Homescreen extends Component {
     super(props);
     this.state = {
       formHidden: true,
-      allAssignments: assignments
+      allAssignments: assignments,
+      sidebarHidden: true
     }
   }
 
@@ -27,15 +30,20 @@ class Homescreen extends Component {
     }
   }
 
+  toggleSidebar = () => {
+    (this.state.sidebarHidden) ? this.setState({sidebarHidden: false}) : this.setState({sidebarHidden: true})
+  }
 
 
   render() {
     return (
       <div>
-        <Navbar formToggle={this.onToggleForm}/>
+        <Navbar formToggle={this.onToggleForm} sidebarToggle={this.toggleSidebar}/>
         <Switcher />
         <AssignmentsContainer assignments={this.state.allAssignments}/>
         {(this.state.formHidden ? null : <AddAssignmentForm formHandler={this.onToggleForm}/>)}
+        <Sidebar class={this.state.sidebarHidden} /> 
+        {(this.state.sidebarHidden) ? null : <Backdrop sidebarToggle={this.toggleSidebar} class={this.state.sidebarHidden}/>}
       </div>
     )
   }
