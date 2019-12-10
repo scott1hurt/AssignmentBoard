@@ -42,7 +42,7 @@ class Homescreen extends Component {
         <Switcher />
         <AssignmentsContainer assignments={this.state.allAssignments}/>
         {(this.state.formHidden ? null : <AddAssignmentForm formHandler={this.onToggleForm}/>)}
-        <Sidebar class={this.state.sidebarHidden}/>
+        <Sidebar class={this.state.sidebarHidden} /> 
         {(this.state.sidebarHidden) ? null : <Backdrop sidebarToggle={this.toggleSidebar} class={this.state.sidebarHidden}/>}
       </div>
     )
