@@ -7,6 +7,7 @@ class Navbar extends Component {
       <div className="navbar">
         <p className='navbar-header'>Assignment Board</p>
         <button onClick={this.props.formToggle} className='navbar-button'>+</button>
+        <button onClick={this.props.sidebarToggle} className='navbar-button'>Open</button>
       </div>
     )
   }
