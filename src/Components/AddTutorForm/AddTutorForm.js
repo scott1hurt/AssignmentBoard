@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './AddAssignmentForm.css'
-import assignments from '../../assignments'
+import tutors from '../../assignments'
 
 class AddAssignmentForm extends Component {
 
@@ -9,11 +9,9 @@ class AddAssignmentForm extends Component {
     this.state = {
       name: '',
       description: '',
-      requirements: [],
-      groupProject: null,
-      dateAssigned: '',
-      dateDue: '',
-      requirementToAdd: '',
+      subjects: [],
+      dateAvailable: '',
+      subjectToAdd: '',
       error: null
     }
   }
@@ -27,57 +25,55 @@ class AddAssignmentForm extends Component {
     })
   }
 
-  submitNewAssignment = () => {
-    if (this.state.name === '' || this.state.description === '' || this.state.requirements.length === 0 || this.state.dateAssigned === '' || this.state.dateDue === '') {
+  submitNewSubject = () => {
+    if (this.state.name === '' || this.state.description === '' || this.state.subjects.length === 0 || this.state.dateAvailable === '') {
       this.setState({
         error: "Please enter in all fields correctly."
       })
     } else {
-      let newAssignment = {
+      let newSubject = {
         name: this.state.name,
         description: this.state.description,
-        requirements: this.state.requirements,
-        groupProject: this.state.groupProject,
-        dateAssigned: this.state.dateAssigned,
-        dateDue: this.state.dateDue
+        subjects: this.state.subjects,
+        dateAvailable: this.state.dateAssigned
       }
 
       this.setState({
         error: null
       })
 
-      assignments.push(newAssignment)
+      tutors.push(newSubject)
       this.props.formHandler()
     }
   }
 
-  handleRequirementChange = (event) => {
+  handleSubjectChange = (event) => {
     this.setState({
-      requirementToAdd: event.target.value
+      subjectToAdd: event.target.value
     })
   }
 
   submitNewRequirement = () => {
-    if (this.state.requirementToAdd === '') {
+    if (this.state.subjectToAdd === '') {
       this.setState({
         error: "Please enter a requirement"
       })
     } else {
-      this.state.requirements.push(this.state.requirementToAdd)
-      console.log(this.state.requirements)
+      this.state.subjects.push(this.state.subjectToAdd)
+      console.log(this.state.subjects)
 
       this.setState({
-        requirementToAdd: '',
+        subjectToAdd: '',
         error: ''
       })
     }
   }
 
-  removeRequirementTag(reqTag) {
-    for (var i = 0; i < this.state.requirements.length; i++) {
-      if (this.state.requirements[i] === reqTag) {
-        this.state.requirements.splice(i, 1);
-        this.setState({ requirements: this.state.requirements })
+  removeSubjectTag(reqTag) {
+    for (var i = 0; i < this.state.subjects.length; i++) {
+      if (this.state.subjects[i] === reqTag) {
+        this.state.subjects.splice(i, 1);
+        this.setState({ subjects: this.state.subjects })
       }
     }
   }
@@ -89,34 +85,32 @@ class AddAssignmentForm extends Component {
 
         <div onClick={this.props.formHandler} className='layer'></div>
         <div className='addContactForm'>
-          <h1>Add Assignment</h1>
+          <h1>Add Tutor</h1>
 
           <input placeholder='Name' className='input' onChange={this.handleInputChange} name='name' />
 
           <input placeholder='Description' className='input' onChange={this.handleInputChange} name='description' />
 
           <div className='requirements'>
-            <input placeholder='Requirement' className='input' onChange={this.handleRequirementChange} name='requirement' value={this.state.requirementToAdd} />
+            <input placeholder='Requirement' className='input' onChange={this.handleSubjectChange} name='requirement' value={this.state.subjectToAdd} />
             <button onClick={this.submitNewRequirement} className='button'>+</button>
           </div>
 
           <div className="requirementTags">
             {
-              this.state.requirements.map((req, index) => (
+              this.state.subjects.map((req, index) => (
                 <div className="tag" key={index}>
-                  <button className="tagButton" onClick={() => this.removeRequirementTag(req)}>X</button>
+                  <button className="tagButton" onClick={() => this.removeSubjectTag(req)}>X</button>
                   <p className="tagName">{req}</p>
                 </div>
               ))
             }
           </div>
 
-          <input placeholder='Date Assigned' className='input' onChange={this.handleInputChange} name='dateAssigned' />
-
-          <input placeholder='Date Due' className='input' onChange={this.handleInputChange} name='dateDue' />
+          <input placeholder='Date Available' className='input' onChange={this.handleInputChange} name='dateAvailable' />
 
           <div className='actionButtons'>
-            <button onClick={this.submitNewAssignment} className='button'>Add</button>
+            <button onClick={this.submitNewSubject} className='button'>Add</button>
             <button onClick={this.props.formHandler} className='button'>Cancel</button>
           </div>
         </div>
