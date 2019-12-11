@@ -17,3 +17,31 @@
 .true {
   transform: translateX(-100%);
 }
+
+
+.switcherMain {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 85%;
+  max-width: 1000px;
+  height: 75px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.switcherSwitch {
+  border-bottom: 10px solid rgba(102, 102, 102);
+  opacity: 0.4;
+  width: 125px;
+  padding: 30px;
+  cursor: pointer;
+  transition: all 0.35s;
+  color: white;
+  
+
+}
+
+.switcherSwitch:hover {
+  opacity: 1;
+}
