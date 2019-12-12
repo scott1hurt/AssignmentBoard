@@ -9,11 +9,12 @@ class Sidebar extends Component {
     return (
       <div className={classes}>
         <div className='switcherMain'>
-          <p className='switcherSwitch'>Math</p>
-          <p className='switcherSwitch'>English</p>
-          <p className='switcherSwitch'>Science</p>
-          <p className='switcherSwitch'>Art</p>
-          <p className='switcherSwitch'>Computer</p>
+        <p className='switcherSwitch' onClick={() => this.props.subjectFilter("All")}>All</p>
+          <p className='switcherSwitch' onClick={() => this.props.subjectFilter("Math")}>Math</p>
+          <p className='switcherSwitch' onClick={() => this.props.subjectFilter("English")}>English</p>
+          <p className='switcherSwitch' onClick={() => this.props.subjectFilter("Science")}>Science</p>
+          <p className='switcherSwitch' onClick={() => this.props.subjectFilter("Art")}>Art</p>
+          <p className='switcherSwitch' onClick={() => this.props.subjectFilter("Computer")}>Computer</p>
         </div>
       </div>
     )

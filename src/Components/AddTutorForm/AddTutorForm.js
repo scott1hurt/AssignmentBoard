@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './AddAssignmentForm.css'
-import tutors from '../../assignments'
+import tutors from '../../tutors'
 
 class AddAssignmentForm extends Component {
 
@@ -35,7 +35,7 @@ class AddAssignmentForm extends Component {
         name: this.state.name,
         description: this.state.description,
         subjects: this.state.subjects,
-        dateAvailable: this.state.dateAssigned
+        dateAvailable: this.state.dateAvailable
       }
 
       this.setState({
