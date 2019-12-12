@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
-import './Sidebar.css'
+import React, { Component } from 'react';
+import './Sidebar.css';
+import image from '../../logo/tutor_img.png'
 
 class Sidebar extends Component {
   render() {
@@ -8,6 +9,7 @@ class Sidebar extends Component {
 
     return (
       <div className={classes}>
+        <img src={image}></img>
         <div className='switcherMain'>
         <p className='switcherSwitch' onClick={() => this.props.subjectFilter("All")}>All</p>
           <p className='switcherSwitch' onClick={() => this.props.subjectFilter("Math")}>Math</p>
