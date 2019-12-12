@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
-import Navbar from '../../Components/Navbar/Navbar'
-import tutors from '../../assignments'
+import React, { Component } from 'react';
+import Navbar from '../../Components/Navbar/Navbar';
+import tutors from '../../assignments';
 import AddAssignmentForm from '../../Components/AddTutorForm/AddTutorForm';
-import AssignmentsContainer from '../../Components/TutorContainer/TutorContainer'
+import AssignmentsContainer from '../../Components/TutorContainer/TutorContainer';
 import Switcher from '../../Components/Switcher/Switcher';
-import Sidebar from '../../Components/Sidebar/'
-import Backdrop from '../../Components/Backdrop'
+import Sidebar from '../../Components/Sidebar/';
+import Backdrop from '../../Components/Backdrop';
 
 class Homescreen extends Component {
 

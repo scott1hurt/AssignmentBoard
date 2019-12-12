@@ -1,6 +1,6 @@
 const tutors = [
   {
-    name: "Mrs. Brown",
+    name: "Mr. Brown",
     gender: "Male",
     location: "Glasgow, Ky",
     description: "Draw out and label all of the planets and list three facts for each planet. List them in the correct order ranking closest to furthest from earth.",
