@@ -5,6 +5,7 @@ import AddAssignmentForm from '../../Components/AddTutorForm/AddTutorForm';
 import TutorContainer from '../../Components/TutorContainer/TutorContainer'
 import Sidebar from '../../Components/Sidebar/'
 import Backdrop from '../../Components/Backdrop'
+import './Homescreen.css'
 
 class Homescreen extends Component {
 

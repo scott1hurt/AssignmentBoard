@@ -8,10 +8,10 @@ class Navbar extends Component {
         <p className='navbar-header'>Tutor Board</p>
         {/* DropDown Menu */}
         <div className='dropdown'>
-          <button className='dropbtn'>☰ Tutoring</button>
+          <button className='dropbtn'>☰ Tutoring Resources</button>
           <div className='dropdown-content'>
             <a rel="noopener noreferrer" target='_blank' href='https://www.wku.edu/getready/tutoring_glasgow.php'>WKU</a>
-            <a rel="noopener noreferrer" target='_blank' href='https://www.wku.edu/getready/tutoring_glasgow.php'>Link 2</a>
+            <a rel="noopener noreferrer" target='_blank' href='https://southcentral.kctcs.edu/current-students/academic-resources/tutoring.aspx'>SKYCTC</a>
           </div>
         </div>
         <button onClick={this.props.formToggle} className='navbar-button'>Add Tutor</button>
