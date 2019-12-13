@@ -1,5 +1,6 @@
 import React from 'react'
 import './Tutor.css'
+import Upload from '../../Upload/Upload';
 
 function Assignment({ name, description, dateAvailable, dateDue, subjects }) {
   return (
@@ -15,6 +16,7 @@ function Assignment({ name, description, dateAvailable, dateDue, subjects }) {
       }
       <br />
       <p className="date">Available: <b>{dateAvailable}</b></p>
+      <Upload />
     </div>
   )
 }
