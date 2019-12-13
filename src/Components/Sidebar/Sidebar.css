@@ -1,5 +1,6 @@
 .o-sidebar {
   position: absolute;
+  text-align: center;
   height: 100%;
   width: 55%;
   max-width: 350px;
@@ -24,9 +25,7 @@
   justify-content: space-between;
   flex-direction: column;
   width: 85%;
-  max-width: 1000px;
-  height: 75px;
-  margin: px auto;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -38,10 +37,8 @@
   cursor: pointer;
   transition: all 0.35s;
   color: white;
-  margin-left: 70px;
+  margin: 0 auto;
   margin-top: 35px;
-  
-
 }
 
 .switcherSwitch:hover {
@@ -49,7 +46,12 @@
 }
 
 img {
-  height: 100px;
-  width: 100px;
-  margin-left:100px;
+  height: 125px;
+  width: 125px;
+  margin-top: 25px;
+}
+
+.heading {
+  color: rgb(160, 160, 160);
+  font-size: 35px;
 }

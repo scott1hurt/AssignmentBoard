@@ -14,6 +14,7 @@ class TutorContainer extends Component {
           description={tutor.description}
           subjects={tutor.subjects}
           dateAvailable={tutor.dateAvailable}
+          location={tutor.location}
         />
       ))
     )

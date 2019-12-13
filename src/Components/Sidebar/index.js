@@ -9,9 +9,10 @@ class Sidebar extends Component {
 
     return (
       <div className={classes}>
-        <img src={image}></img>
+        <img src={image} alt='img'></img>
+        <p className='heading'>Tutor Board</p>
         <div className='switcherMain'>
-        <p className='switcherSwitch' onClick={() => this.props.subjectFilter("All")}>All</p>
+          <p className='switcherSwitch' onClick={() => this.props.subjectFilter("All")}>All</p>
           <p className='switcherSwitch' onClick={() => this.props.subjectFilter("Math")}>Math</p>
           <p className='switcherSwitch' onClick={() => this.props.subjectFilter("English")}>English</p>
           <p className='switcherSwitch' onClick={() => this.props.subjectFilter("Science")}>Science</p>

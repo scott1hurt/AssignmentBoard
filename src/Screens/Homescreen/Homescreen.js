@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Navbar from '../../Components/Navbar/Navbar'
 import tutors from '../../tutors'
 import AddAssignmentForm from '../../Components/AddTutorForm/AddTutorForm';
-import AssignmentsContainer from '../../Components/TutorContainer/TutorContainer'
+import TutorContainer from '../../Components/TutorContainer/TutorContainer'
 import Sidebar from '../../Components/Sidebar/'
 import Backdrop from '../../Components/Backdrop'
 
@@ -64,7 +64,7 @@ class Homescreen extends Component {
     return (
       <div>
         <Navbar formToggle={this.onToggleForm} sidebarToggle={this.toggleSidebar}/>
-        <AssignmentsContainer tutors={this.state.allTutors}/>
+        <TutorContainer tutors={this.state.allTutors}/>
         {(this.state.formHidden ? null : <AddAssignmentForm formHandler={this.onToggleForm}/>)}
         <Sidebar class={this.state.sidebarHidden} subjectFilter={this.subjectFilter} /> 
         {(this.state.sidebarHidden) ? null : <Backdrop sidebarToggle={this.toggleSidebar} class={this.state.sidebarHidden}/>}

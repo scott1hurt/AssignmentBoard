@@ -5,7 +5,7 @@ class Navbar extends Component {
   render() {
     return (
       <div className="navbar">
-        <p className='navbar-header'>Assignment Board</p>
+        <p className='navbar-header'>Tutor Board</p>
         {/* DropDown Menu */}
         <div className='dropdown'>
           <button className='dropbtn'>☰ Tutoring</button>
