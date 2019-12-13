@@ -80,6 +80,7 @@ class AddAssignmentForm extends Component {
 
   render() {
     return (
+      
       <div>
         <div className={this.state.error ? "error show" : "error hide"}>{this.state.error}</div>
 
@@ -91,8 +92,8 @@ class AddAssignmentForm extends Component {
 
           <input placeholder='Description' className='input' onChange={this.handleInputChange} name='description' />
 
-          <div className='requirements'>
-            <input placeholder='Requirement' className='input' onChange={this.handleSubjectChange} name='requirement' value={this.state.subjectToAdd} />
+          <div className='Subject'>
+            <input placeholder='Subject' className='input' onChange={this.handleSubjectChange} name='subject' value={this.state.subjectToAdd} pattern='[A-Za-z]' />
             <button onClick={this.submitNewRequirement} className='button'>+</button>
           </div>
 
@@ -107,7 +108,7 @@ class AddAssignmentForm extends Component {
             }
           </div>
 
-          <input placeholder='Date Available' className='input' onChange={this.handleInputChange} name='dateAvailable' />
+          <input placeholder='Date Available' className='input' onChange={this.handleInputChange} name='dateAvailable'/>
 
           <div className='actionButtons'>
             <button onClick={this.submitNewSubject} className='button'>Add</button>

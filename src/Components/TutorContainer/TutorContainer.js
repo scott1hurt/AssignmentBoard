@@ -23,7 +23,7 @@ class TutorContainer extends Component {
   handleTutors = () => {
     if (this.props.tutors.length === 0) {
       return (
-        <h1>There is no tutors</h1>
+        <h1>There are no tutors</h1>
       )
     } else {
       return (
