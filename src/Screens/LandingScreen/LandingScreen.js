@@ -1,16 +1,26 @@
 import React, { Component } from 'react';
 import '../LandingScreen/LandingScreen.css';
+import Homescreen from '../Homescreen/Homescreen';
+import { 
+        Route, 
+        BrowserRouter as Router,
+        Link,
+        Switch 
+        } from 'react-router-dom';
 
 class LandingScreen extends Component {
     render() {
         return (
-            <div className='backgroundimg'>
+            <div>
+                <img className='landingBackground'></img>
+                {/* <div className='layer'></div> */}
                 <div className='landingBox'>
-                    <h1>TITLE</h1>
-                    <br />
-                    <hr />
-                    <br />
-                    <p>BODY TEXT</p>
+                    <h1>Tutors4You</h1>
+                    
+                    <p>Bridging the Educational Divide, One Student at a Time!</p>
+                    <Link to='/home'>
+                        <button>Get Started</button>
+                    </Link>
                 </div>
 
             </div>
