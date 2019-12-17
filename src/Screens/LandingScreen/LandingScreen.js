@@ -4,18 +4,14 @@ import '../LandingScreen/LandingScreen.css';
 class LandingScreen extends Component {
     render() {
         return (
-            <div className='backgroundimg'>
-                <div className='landingBox'>
-                    <h1>TITLE</h1>
-                    <br />
-                    <hr />
-                    <br />
-                    <p>BODY TEXT</p>
+            <div className='landingMain'>
+                <div className='landingContainer'>
+                    <div className='landingBox'>
+                        <h1 className="landingHeading">Tutor Board</h1>
+                    </div>
                 </div>
-
             </div>
         )
-        
     }
 }
 

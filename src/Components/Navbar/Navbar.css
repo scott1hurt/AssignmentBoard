@@ -13,7 +13,7 @@
 .navbar-header {
   font-size: 21px;
   color: white;
-  margin-left: 20px;
+  margin-left: 5px;
 }
 
 .navbar-button {
@@ -28,6 +28,12 @@
   outline: none;
   margin-right: 20px;
   color: rgb(20, 20, 20);
+}
+
+.navbarMain {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
 }
 
 .navbar-button:hover {
@@ -52,6 +58,7 @@
 .dropdown {
   position: relative;
   display: inline-block;
+  margin-right: 20px;
 }
 
 /* Dropdown Content (Hidden by Default) */

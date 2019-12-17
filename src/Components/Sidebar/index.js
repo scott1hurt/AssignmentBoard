@@ -5,7 +5,7 @@ import image from '../../logo/tutor_img.png'
 class Sidebar extends Component {
   render() {
 
-    var classes = `o-sidebar ${this.props.class}`
+    var classes = `o-sidebar ${this.props.class}1`
 
     return (
       <div className={classes}>

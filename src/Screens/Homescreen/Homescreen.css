@@ -1,4 +1,13 @@
 body {
-    background-color:lightslategray; 
-    color: lightgreen;
+    background-color:rgb(194, 194, 194); 
+
+    background: linear-gradient(270deg, #7e7e7e, #555555);
+    background-size: 400% 400%;
+    animation: AnimationName 10s ease infinite;
+}
+
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }

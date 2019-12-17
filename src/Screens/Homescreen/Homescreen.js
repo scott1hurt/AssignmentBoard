@@ -68,7 +68,7 @@ class Homescreen extends Component {
         <TutorContainer tutors={this.state.allTutors}/>
         {(this.state.formHidden ? null : <AddAssignmentForm formHandler={this.onToggleForm}/>)}
         <Sidebar class={this.state.sidebarHidden} subjectFilter={this.subjectFilter} /> 
-        {(this.state.sidebarHidden) ? null : <Backdrop sidebarToggle={this.toggleSidebar} class={this.state.sidebarHidden}/>}
+        <Backdrop sidebarToggle={this.toggleSidebar} class={this.state.sidebarHidden}/>
       </div>
     )
   }
