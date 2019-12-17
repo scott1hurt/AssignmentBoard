@@ -11,11 +11,11 @@
   z-index: 101;
 }
 
-.false {
+.false1 {
   transform: translateX(0%);
 }
 
-.true {
+.true1 {
   transform: translateX(-100%);
 }
 
@@ -30,8 +30,8 @@
 }
 
 .switcherSwitch {
-  border-bottom: 10px solid rgba(102, 102, 102);
-  opacity: 0.4;
+  border-bottom: 7px solid rgb(199, 199, 199);
+  opacity: 0.7;
   width: 125px;
   padding: 20px;
   cursor: pointer;
@@ -39,6 +39,7 @@
   color: white;
   margin: 0 auto;
   margin-top: 35px;
+  font-size: 21px;
 }
 
 .switcherSwitch:hover {

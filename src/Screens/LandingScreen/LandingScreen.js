@@ -11,6 +11,7 @@ import {
 class LandingScreen extends Component {
     render() {
         return (
+
             <div>
                 <img className='landingBackground'></img>
                 {/* <div className='layer'></div> */}
@@ -21,11 +22,16 @@ class LandingScreen extends Component {
                     <Link to='/home'>
                         <button>Get Started</button>
                     </Link>
-                </div>
 
+            <div className='landingMain'>
+                <div className='landingContainer'>
+                    <div className='landingBox'>
+                        <h1 className="landingHeading">Tutor Board</h1>
+                    </div>
+
+                </div>
             </div>
         )
-        
     }
 }
 

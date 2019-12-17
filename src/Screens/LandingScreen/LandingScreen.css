@@ -1,9 +1,11 @@
+
 body {
     height: 100%;
     width: 100%;
 }
 
 .landingBackground {
+
     background-image: url('https://www.ox.ac.uk/sites/files/oxford/styles/ow_large_feature/public/field/field_image_main/GAF%20Radcliffe%20Square%20Dawn%20-%20Elizabeth%20Nyikos.jpg?itok=lMOJNcd9');
     background-size: cover;
     background-repeat: no-repeat;
@@ -27,52 +29,25 @@ body {
 
 
 
-h1 {
+.landingContainer {
+    height: 700px;
+    width: 85%;
+    max-width: 1200px;
+    margin: 150px auto;
+    background-color: thistle;
+    display: flex;
+    border-radius: 15px;
+}
+
+.landingBox {
+    flex-basis: 100%;
     text-align: center;
     font-size: 70px;
     margin: 0;
     padding-top: 10px;
 }
 
-p {
-    text-align: center;
-    padding: 0 120px;
-}
-
-.landingBox {
-    height: 200px;
-    width: 500px;
-    background-color: black;
-    margin: 155px 440px;
-    opacity: .75;
-    /* padding-top: px; */
-    display: inline-block;
-    position: absolute;
-    text-align: center;
-}
-
-button {
-    margin-top: 100px;
-    height: 50px;
-    width: 150px;
-    border-radius: 30%;
-    background-color: rgb(24, 23, 23);
-    border: none;
-    color: white;
-    font-size: 25px;
-}
-
-button:active{
-    outline: none;
-    border-radius: 50%;
-}
-
-button:focus {
-    outline: none;
-}
-
-button:hover {
-    background-color: rgb(10, 10, 10);
-    transition: .5s;
-}
-
+.landingHeading {
+    font-size: 45px;
+    font-family: 'Muli', sans-serif;
+  }

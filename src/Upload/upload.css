@@ -12,7 +12,7 @@
     flex-direction: row;
     padding-top: 16px;
     box-sizing: content-box;
-    width: 50%;
+    width: 100%;
   }
   
   .Files {

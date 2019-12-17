@@ -4,6 +4,16 @@
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.322);
   z-index: 100;
+  transition: all 0.75s;
+}
+
+.false {
+  background-color: rgba(0, 0, 0, 0.466);
+  display: block;
+}
+
+.true {
+  background-color: rgba(0, 0, 0, 0);
+  display: none;
 }

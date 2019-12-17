@@ -92,7 +92,7 @@ class AddAssignmentForm extends Component {
 
           <input placeholder='Description' className='input' onChange={this.handleInputChange} name='description' />
 
-          <div className='Subject'>
+          <div className='subject'>
             <input placeholder='Subject' className='input' onChange={this.handleSubjectChange} name='subject' value={this.state.subjectToAdd} pattern='[A-Za-z]' />
             <button onClick={this.submitNewRequirement} className='button'>+</button>
           </div>
