@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import Navbar from '../../Components/Navbar/Navbar'
-import tutors from '../../assignments'
+import tutors from '../../tutors'
 import AddAssignmentForm from '../../Components/AddTutorForm/AddTutorForm';
-import AssignmentsContainer from '../../Components/TutorContainer/TutorContainer'
-import Switcher from '../../Components/Switcher/Switcher';
+import TutorContainer from '../../Components/TutorContainer/TutorContainer'
 import Sidebar from '../../Components/Sidebar/'
 import Backdrop from '../../Components/Backdrop'
+import './Homescreen.css'
 
 class Homescreen extends Component {
 
@@ -14,7 +14,8 @@ class Homescreen extends Component {
     this.state = {
       formHidden: true,
       allTutors: tutors,
-      sidebarHidden: true
+      sidebarHidden: true,
+      currentSubject: "",
     }
   }
 
@@ -34,15 +35,39 @@ class Homescreen extends Component {
     (this.state.sidebarHidden) ? this.setState({sidebarHidden: false}) : this.setState({sidebarHidden: true})
   }
 
+  subjectFilter = subjectToSet => {
+    this.setState({ currentSubject: subjectToSet })
+    this.toggleSidebar()
+    this.renderFilteredSubjects(subjectToSet)
+  }
+
+  renderFilteredSubjects = subjectName => {
+
+    let currentArray = tutors
+    let newArray = []
+
+    for (const sub of currentArray) {
+      for (const subName of sub.subjects) {
+        if (subName === subjectName) {
+          newArray.push(sub)
+        } else if (subjectName === "All") {
+          newArray = tutors
+        }
+      }
+    }
+
+    this.setState({ allTutors: newArray })
+
+    return this.state.allTutors
+  }
 
   render() {
     return (
       <div>
         <Navbar formToggle={this.onToggleForm} sidebarToggle={this.toggleSidebar}/>
-        <Switcher />
-        <AssignmentsContainer tutors={this.state.allTutors}/>
+        <TutorContainer tutors={this.state.allTutors}/>
         {(this.state.formHidden ? null : <AddAssignmentForm formHandler={this.onToggleForm}/>)}
-        <Sidebar class={this.state.sidebarHidden} /> 
+        <Sidebar class={this.state.sidebarHidden} subjectFilter={this.subjectFilter} /> 
         {(this.state.sidebarHidden) ? null : <Backdrop sidebarToggle={this.toggleSidebar} class={this.state.sidebarHidden}/>}
       </div>
     )

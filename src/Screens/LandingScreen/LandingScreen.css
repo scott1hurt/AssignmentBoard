@@ -1,0 +1,21 @@
+body {
+    background-image: url('https://www.ox.ac.uk/sites/files/oxford/styles/ow_large_feature/public/field/field_image_main/GAF%20Radcliffe%20Square%20Dawn%20-%20Elizabeth%20Nyikos.jpg?itok=lMOJNcd9');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+.landingBox {
+    height: 500px;
+    width: 500px;
+    background-color: black;
+    margin: 163px auto;
+}

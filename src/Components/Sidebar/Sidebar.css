@@ -1,5 +1,6 @@
 .o-sidebar {
   position: absolute;
+  text-align: center;
   height: 100%;
   width: 55%;
   max-width: 350px;
@@ -16,4 +17,41 @@
 
 .true {
   transform: translateX(-100%);
+}
+
+
+.switcherMain {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 85%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.switcherSwitch {
+  border-bottom: 10px solid rgba(102, 102, 102);
+  opacity: 0.4;
+  width: 125px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.35s;
+  color: white;
+  margin: 0 auto;
+  margin-top: 35px;
+}
+
+.switcherSwitch:hover {
+  opacity: 1;
+}
+
+img {
+  height: 125px;
+  width: 125px;
+  margin-top: 25px;
+}
+
+.heading {
+  color: rgb(160, 160, 160);
+  font-size: 35px;
 }
